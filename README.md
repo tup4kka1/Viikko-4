@@ -2,14 +2,15 @@ Pienimuotoinen task list, laajennettu navigoinnilla.
 
 FEATURET:
 
--Tasklist
--Taskin lisäys (AlertDialog)
--Taskien merkintä tehdyksi
--Taskin poisto
--Taskien suodatus (vain tehdyt)
--Taskien sorttaus due daten mukaan
--Taskin muokkaus ja poisto DetailDialogissa
--Navigointi näkymien välillä (Home ↔ Calendar ↔ Settings)
+- Tasklist
+- Taskin lisäys (AlertDialog)
+- Taskien merkintä tehdyksi
+- Taskin poisto
+- Taskien suodatus (vain tehdyt)
+- Taskien sorttaus due daten mukaan
+- Taskin muokkaus ja poisto DetailDialogissa
+- Navigointi näkymien välillä (Home ↔ Calendar ↔ Settings)
+
 
 Navigointi Jetpack Composessa tarkoittaa sitä, että sovelluksessa liikutaan eri näkymien (Composable-funktioiden) välillä NavControllerin avulla ilman useita Activityjä. Sovellus käyttää Single-Activity-arkkitehtuuria, jossa kaikki näkymät ovat saman Activityn sisällä.
 NavController huolehtii siitä, missä näkymässä käyttäjä on ja minne siirrytään seuraavaksi.
