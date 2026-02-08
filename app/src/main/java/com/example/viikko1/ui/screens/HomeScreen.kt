@@ -1,4 +1,4 @@
-package com.example.viikko1.ui
+package com.example.viikko1.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -8,12 +8,15 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.viikko1.domain.Task
 import com.example.viikko1.viewmodel.TaskViewModel
 
 @Composable
-fun HomeScreen(taskViewModel: TaskViewModel = viewModel()) {
+fun HomeScreen(
+    taskViewModel: TaskViewModel,
+    onGoCalendar: () -> Unit,
+    onGoSettings: () -> Unit
+) {
 
     var selectedTask by remember { mutableStateOf<Task?>(null) }
     val tasks = taskViewModel.tasks
@@ -33,6 +36,18 @@ fun HomeScreen(taskViewModel: TaskViewModel = viewModel()) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Button(onClick = onGoCalendar) {
+                Text("Calendar")
+            }
+
+            Button(onClick = onGoSettings) {
+                Text("Settings")
+            }
+        }
+
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Button(onClick = {

@@ -1,4 +1,4 @@
-package com.example.viikko1.ui
+package com.example.viikko1.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
